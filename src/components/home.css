@@ -1,0 +1,55 @@
+.me{
+    display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      /* overflow-x: hidden; */
+}
+.me::after {
+    content: "";
+    width: 40vmax;
+    height: 40vmax;
+    background-color: rgb(37, 169, 37);
+    position: absolute;
+    top: 0.5;
+    /* z-index: 1; */
+    border-radius: 50%;
+    }
+
+    .home{
+        height: 40vmax;
+        position: relative;
+    }
+
+
+    @keyframes animateSvg {
+        to {
+          transform: translateY(20%)
+        }
+      }
+
+
+    .downanim{
+        /* position: relative; */
+    font-size: 4rem;
+    /* color: black; */
+    /* top:0; */
+    /* left: 0; */
+    /* bottom: 0; */
+    /* transform: translateY(20%); */
+    animation: animateSvg 2s infinite linear ;
+}
+
+.down1 svg{
+    color: rgba(0, 0, 0, 0.441);
+    /* width: 2px; */
+
+}
+.down2 svg{
+    color: rgba(0, 0, 0, 0.671)
+
+}
+.down3 svg{
+    color: black
+
+}

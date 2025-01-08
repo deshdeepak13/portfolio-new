@@ -1,0 +1,67 @@
+@keyframes upanddown {
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+.timelineBox::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  top: 0%;
+  bottom: 0%;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timelineItem {
+  padding: 1rem 3rem;
+  position: relative;
+  width: 50%;
+}
+
+.timelineItem:nth-child(odd) {
+  text-align: right;
+}
+.timelineItem:nth-child(odd)::after {
+  animation: upanddown 0.3s infinite ease-in alternate;
+}
+.timelineItam:nth-child(even) {
+  text-align: left;
+}
+.timelineItam:nth-child(even)::after {
+  animation: upanddown 0.5s infinite ease-in alternate;
+}
+
+
+.timelineItem::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  /* background-color: $color1; */
+  border: 4px solid;
+  top: 45px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timelineItem > div {
+  padding: 20px 30px;
+  /* // background-color: $color5; */
+  /* background-color: white; */
+  /* // color: $color1; */
+  border-radius: 6px;
+}
+
+.rightTimeline::after {
+  left: -13px;
+}
+
+.leftTimeline {
+  left: 0%;
+}
+.rightTimeline {
+  left: 50%;
+}
